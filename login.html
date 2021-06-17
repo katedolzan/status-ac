@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel='shortcut icon' type='image/x-icon' href='dist/img/favicon.ico' />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Área Central - Status</title>
+  <!-- Google Font: Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.css">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <!-- /.login-logo -->
+  <div class="card card-outline card-primary">
+    <div class="card-header text-center">
+      <img src="dist/img/login.png">
+    </div>
+    <div class="card-body">
+      <h4 style="text-align: center;"><strong>Olá, Acelerado!</strong></h4>
+      <p class="login-box-msg">Utilize seu email <strong>Área Central</strong> para efetuar o acesso.</p>
+
+      <div class="social-auth-links text-center mt-2 mb-3">
+        <a class="btn-user btn-sm" href="javascript:jLoginGoogle()" role="button" style="text-transform:none; width: 100%">
+          <img width="25px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="dist/img/google.png">
+              Continuar com o Google
+              </a>
+      </div>
+      <!-- /.social-auth-links -->
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+<!-- /.login-box -->
+<form id="form-login" target="google" method="POST" action="https://status.areacentral.com.br/logingoogle"><input type="hidden" name="urlauth" id="urlauth" value="https://status.areacentral.com.br/logingoogle"></form>
+<iframe src="" name="google" id="google" frameborder="0" width="0" height="0"></iframe>
+
+
+<!-- jQuery -->
+ <script>
+          /**
+           * Função responsável por logar o usuario
+           *
+           * @return void
+           */
+          function jLoginGoogle() {
+            var oAuth = $('<input type="hidden" name="urlauth" id="urlauth" value="https://status.areacentral.com.br/logingoogle">');
+            $('#form-login').append(oAuth);
+
+            $('#form-login').attr('target', 'google');
+            $('#form-login').attr('method', 'POST');
+            $('#form-login').attr('action', 'https://status.areacentral.com.br/logingoogle');
+            $('#form-login').submit();
+          }
+        </script>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+</body>
+</html>

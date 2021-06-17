@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<!--
+   Esse é o novo HTML do status feito pela Kate :D
+   -->
+<html lang="en">
+   <head>
+      <link rel='shortcut icon' type='image/x-icon' href='dist/img/favicon.ico' />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Área Central - Status</title>
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Google Font: Nunito -->
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="dist/css/adminlte.css">
+      <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+   </head>
+   <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+      <div class="wrapper">
+         <!-- Preloader -->
+         <div class="preloader flex-column justify-content-center align-items-center">
+            <img src="dist/img/aclogo.png" alt="ACLogo" height="30" width="40">
+         </div>
+         <!-- Navbar -->
+         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-chevron-right"></i></a>
+               </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="log-out" href="login.html" role="button">
+                  <i class="fas fa-sign-out-alt"></i>
+                  </a>
+               </li>                    
+            </ul>
+         </nav>
+         <!-- /.navbar -->
+         <!-- Main Sidebar Container -->
+         <aside class="main-sidebar sidebar-light-primary" style="box-shadow: 9px 9px 15px -9px rgba(74,82,150,0.15)
+            ">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+            <img src="dist/img/aclogo1.png" alt="ACLogo">
+            <img src="dist/img/aclogo2.png" class="brand-text font-weight-light">
+            </a>
+            <!-- Sidebar -->
+            <div class="sidebar">
+               <!-- Sidebar Menu -->
+               <nav class="mt-2">
+                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                     <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                     <li class="dash-space">
+                        <a href="index.html" class="nav-link btn-dashboard">
+                           <img src="dist/img/grid.svg" alt="Dashboard" style="margin-right:15px">
+                           <p>
+                              Dashboard
+                           </p>
+                        </a>
+                        </li>                              
+                     <li class="nav-item menu-is-opening menu-open">
+                      <a href="#" class="nav-link active">
+                           <img src="dist/img/monitor.svg" alt="Monitores" style="margin-right:15px">
+                           <p>
+                              Monitores
+                              <span class="badge badge-primary" style="margin-left: 5px;">Novo</span>
+                           </p>
+                              <i class="right fas fa-angle-right"></i>                           
+                        </a>
+                        <ul class="nav nav-treeview" style="display: block;">
+                           <li class="nav-item">
+                              <a href="monitor-compras.html" class="nav-link nav-link:focus">
+                                 <img src="dist/img/compra.svg" alt="Compras" style="margin-right:15px">
+                                 <p>Compras</p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="monitor-vendas.html" class="nav-link">
+                                 <img src="dist/img/venda.svg" alt="Vendas" style="margin-right:15px">
+                                 <p>Vendas</p>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav-item menu-is-opening menu-open">
+                        <a href="#" class="nav-link active">
+                           <img src="dist/img/status.svg" alt="Status" style="margin-right:15px">
+                           <p>
+                              Situação
+                              <i class="right fas fa-angle-right"></i>
+                           </p>
+                        </a>
+                        <ul class="nav nav-treeview" style="display: block;">
+                           <li class="nav-item">
+                              <a href="situacao-servicos.html" class="nav-link">
+                                 <img src="dist/img/activity.svg" alt="Serviços" style="margin-right:15px">
+                                 <p>Serviços</p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="situacao-reuniao.html" class="nav-link">
+                                 <img src="dist/img/video.svg" alt="Reuniao" style="margin-right:15px">
+                                 <p>Reunião Virtual</p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="situacao-ocioso.html" class="nav-link">
+                                 <img src="dist/img/ociosidade.svg" alt="Ociosidade" style="margin-right:15px">
+                                 <p>Ociosidade</p>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                      <li class="nav-item menu-is-opening menu-open">
+                        <a href="#" class="nav-link active">
+                           <img src="dist/img/tool-1.svg" alt="Manutenção" style="margin-right:15px">
+                           <p>
+                              Manutenção
+                              <i class="right fas fa-angle-right"></i>
+                           </p>
+                        </a>
+                        <ul class="nav nav-treeview" style="display: block;">
+                           <li class="nav-item">
+                              <a href="manutencao-agendar.html" class="nav-link nav-link:focus">
+                                 <img src="dist/img/bell.svg" alt="Manutenção" style="margin-right:15px">
+                                 <p>Agendar Manutenção</p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="manutencao-incidentes.html" class="nav-link">
+                                 <img src="dist/img/cloud-off.svg" alt="Verificar" style="margin-right:15px">
+                                 <p>Verificar Incidentes</p>
+                              </a>
+                           </li> 
+                           <li class="nav-item">
+                              <a href="manutencao-reportar.html" class="nav-link nav-link:focus">
+                                 <img src="dist/img/clipboard.svg" alt="Reportar" style="margin-right:15px">
+                                 <p>Reportar Incidentes</p>
+                              </a>
+                           </li>                           
+                           </ul>
+                           </li>                  
+                  </ul>
+               </nav>
+               <!-- /.sidebar-menu -->
+               <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+         </aside>
+         <!-- Content Wrapper. Contains page content -->
+         <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+               <div class="container-fluid">
+                  <div class="row mb-2">
+                     <div class="col-sm-6">
+                        <h6 style="color:#909398">PAINEL</h6>
+                        <h1 class="m-0"><strong>Monitoramento de Vendas</strong></h1>
+                     </div>
+                     <!-- /.col -->
+                  </div>
+                  <!-- /.row -->
+               </div>
+               <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <div class="content">
+               <div class="container-fluid">
+   <!-- Primeira linha de infos -->
+   <div class="row">
+      <div class="col-lg-3 col-6 espaco-card">
+         <!-- small card -->
+         <div class="small-box bg-white collapsed" data-toggle="collapse" role="button" data-target="#collapseOneVenda" aria-expanded="false" aria-controls="collapseOneVenda">
+            <div class="inner inner-red">
+               <div class="row justify-content-between cards-inner" style="">
+                  <h1 class="col-auto info-numero"><strong>784</strong></h1>
+                  <img class="col-auto icon" src="dist/img/nao-instalados.svg">
+               </div>
+               <div class="row justify-content-between cards-inner" style="
+                  ">
+                  <div class="col indicador"><strong>Não Instalados</strong></div>
+                  <div class="col meta-info">10% / 76,26%<img src="dist/img/chevron-right.svg"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-6 espaco-card">
+         <!-- small card -->
+         <div class="small-box bg-white collapsed" aria-expanded="false" aria-controls="collapseExample">
+            <div class="inner inner-green">
+               <div class="row justify-content-between cards-inner" style="">
+                  <h1 class="col-auto info-numero"><strong>240</strong></h1>
+                  <img class="col-auto icon" src="dist/img/instalados.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col indicador" style="font-size:21px;"><strong>Instalados</strong></div>
+                  <div class="col meta-info"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-6 espaco-card">
+         <!-- small card -->
+         <div class="small-box bg-white collapsed" aria-expanded="false" aria-controls="collapseExample">
+            <div class="inner inner-green">
+               <div class="row justify-content-between cards-inner" style="
+                  ">
+                  <h1 class="col-auto info-numero"><strong>99</strong></h1>
+                  <img class="col-auto icon" src="dist/img/ativos.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col" style="font-size:21px;"><strong>Ativos</strong></div>
+                  <div class="col meta-info"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-6 espaco-card">
+         <!-- small card -->
+         <div class="small-box bg-white collapsed" data-toggle="collapse" role="button" data-target="#collapseTwoVenda" aria-expanded="false" aria-controls="collapseTwoVenda">
+            <div class="inner inner-red">
+               <div class="row justify-content-between cards-inner" style="">
+                  <h1 class="col-auto info-numero"><strong>4</strong></h1>
+                  <img class="col-auto icon" src="dist/img/inativos.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col" style="font-size:21px;"><strong>Inativos</strong></div>
+                  <div class="col meta-info"><img src="dist/img/chevron-right.svg"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-6 espaco-card">
+         <!-- small card -->
+         <div class="small-box bg-white collapsed" data-toggle="collapse" role="button" data-target="#collapseThreeVenda" aria-expanded="false" aria-controls="collapseThreeVenda">
+            <div class="inner inner-purple">
+               <div class="row justify-content-between cards-inner" style="">
+                  <h1 class="col-auto info-numero"><strong>14</strong></h1>
+                  <img class="col-auto icon" src="dist/img/novos.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col" style="font-size:21px;"><strong>Novos</strong></div>
+                  <div class="col meta-info"><img src="dist/img/chevron-right.svg"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-6 espaco-card">
+         <!-- small card -->
+         <div class="small-box bg-white collapsed" data-toggle="collapse" role="button" data-target="#collapseFourVenda" aria-expanded="false" aria-controls="collapseFourVenda">
+            <div class="inner inner-purple">
+               <div class="row justify-content-between cards-inner" style="">
+                  <h1 class="col-auto info-numero"><strong>38</strong></h1>
+                  <img class="col-auto icon" src="dist/img/novos.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col" style="font-size:21px;"><strong>Por Integração</strong></div>
+                  <div class="col meta-info"><img src="dist/img/chevron-right.svg"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-6 espaco-card">
+         <!-- small card -->
+         <div class="small-box bg-white collapsed" data-toggle="collapse" role="button" data-target="#collapseFiveVenda" aria-expanded="false" aria-controls="collapseFiveVenda">
+            <div class="inner inner-yellow">
+               <div class="row justify-content-between cards-inner" style="">
+                  <h1 class="col-auto info-numero"><strong>43</strong></h1>
+                  <img class="col-auto icon" src="dist/img/desatualizado.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col" style="font-size:21px;"><strong>Desatualizados</strong></div>
+                  <div class="col meta-info"><img src="dist/img/chevron-right.svg"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col espaco-card">
+         <!-- NÃO INSTALADOS -->
+         <div class="collapse card-infos" id="collapseOneVenda" style="">
+            <div class="card card-body">
+               <div class="row justify-content-between">
+                  <div class="col-5">
+                     <h5 class="card-title" style="color:#FB5449"><img class="icon" src="dist/img/noinsta-icon.svg" style="margin-right:10px"><strong>Não Instalados</strong></h5>
+                  </div>
+                  <div class="col-6" style="margin-bottom: 20px">
+                     <form action="">
+                        <div class="input-group">
+                           <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                           <div class="input-group-append">
+                              <button type="submit" class="btn btn-lg btn-default">
+                              <i class="fa fa-search"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body table-responsive p-0" style="height: 350px;padding-top: 0px;">
+                  <table class="table table-head-fixed text-nowrap">
+                     <thead style="font-size: 14px;">
+                        <tr>
+                           <th>Rede</th>
+                           <th>Razão Social</th>
+                           <th>Tipo</th>
+                           <th>Detalhes</th>
+                        </tr>
+                     </thead>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="filial">FILIAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="associado">ASSOCIADO</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <!-- NÃO INSTALADOS -->
+         <!-- INATIVOS -->
+         <div class="collapse card-infos" id="collapseTwoVenda">
+            <div class="card card-body">
+               <div class="row justify-content-between">
+                  <div class="col-5">
+                     <h5 class="card-title" style="color:#FB5449"><img class="icon" src="dist/img/inativo-icon.svg" style="margin-right:10px"><strong>Inativos</strong></h5>
+                  </div>
+                  <div class="col-6" style="margin-bottom: 20px">
+                     <form action="">
+                        <div class="input-group">
+                           <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                           <div class="input-group-append">
+                              <button type="submit" class="btn btn-lg btn-default">
+                              <i class="fa fa-search"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body table-responsive p-0" style="height: 350px;padding-top: 0px;">
+                  <table class="table table-head-fixed text-nowrap">
+                     <thead style="font-size: 14px;">
+                        <tr>
+                           <th>Rede</th>
+                           <th>Razão Social</th>
+                           <th>Tipo</th>
+                           <th>Detalhes</th>
+                        </tr>
+                     </thead>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="filial">FILIAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="associado">ASSOCIADO</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <!-- INATIVOS -->
+         <!-- NOVOS -->
+         <div class="collapse card-infos" id="collapseThreeVenda">
+            <div class="card card-body">
+               <div class="row justify-content-between">
+                  <div class="col-5">
+                     <h5 class="card-title" style="color:#9655C9"><img class="icon" src="dist/img/novo-icon.svg" style="margin-right:10px"><strong>Novos</strong></h5>
+                  </div>
+                  <div class="col-6" style="margin-bottom: 20px">
+                     <form action="">
+                        <div class="input-group">
+                           <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                           <div class="input-group-append">
+                              <button type="submit" class="btn btn-lg btn-default">
+                              <i class="fa fa-search"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body table-responsive p-0" style="height: 350px;padding-top: 0px;">
+                  <table class="table table-head-fixed text-nowrap">
+                     <thead style="font-size: 14px;">
+                        <tr>
+                           <th>Rede</th>
+                           <th>Razão Social</th>
+                           <th>Tipo</th>
+                           <th>Detalhes</th>
+                        </tr>
+                     </thead>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="filial">FILIAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="associado">ASSOCIADO</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <!-- NOVOS -->
+         <!-- INTEGRAÇÃO -->
+         <div class="collapse card-infos" id="collapseFourVenda">
+            <div class="card card-body">
+               <div class="row justify-content-between">
+                  <div class="col-5">
+                     <h5 class="card-title" style="color:#9655C9"><img class="icon" src="dist/img/novo-icon.svg" style="margin-right:10px"><strong>Por Integração</strong></h5>
+                  </div>
+                  <div class="col-6" style="margin-bottom: 20px">
+                     <form action="">
+                        <div class="input-group">
+                           <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                           <div class="input-group-append">
+                              <button type="submit" class="btn btn-lg btn-default">
+                              <i class="fa fa-search"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body table-responsive p-0" style="height: 350px;padding-top: 0px;">
+                  <table class="table table-head-fixed text-nowrap">
+                     <thead style="font-size: 14px;">
+                        <tr>
+                           <th>Rede</th>
+                           <th>Razão Social</th>
+                           <th>Tipo</th>
+                           <th>Detalhes</th>
+                        </tr>
+                     </thead>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="filial">FILIAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="associado">ASSOCIADO</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <!-- INTEGRAÇÃO -->
+         <!-- DESATUALIZADOS -->
+         <div class="card-infos collapse" id="collapseFiveVenda" style="">
+            <div class="card card-body">
+               <div class="row justify-content-between">
+                  <div class="col-5">
+                     <h5 class="card-title" style="color:#FEBA02"><img class="icon" src="dist/img/desatualizado-icon.svg" style="margin-right:10px"><strong>Desatualizados</strong></h5>
+                  </div>
+                  <div class="col-6" style="margin-bottom: 20px">
+                     <form action="">
+                        <div class="input-group">
+                           <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                           <div class="input-group-append">
+                              <button type="submit" class="btn btn-lg btn-default">
+                              <i class="fa fa-search"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body table-responsive p-0" style="height: 350px;padding-top: 0px;">
+                  <table class="table table-head-fixed text-nowrap">
+                     <thead style="font-size: 14px;">
+                        <tr>
+                           <th>Rede</th>
+                           <th>Razão Social</th>
+                           <th>Tipo</th>
+                           <th>Detalhes</th>
+                        </tr>
+                     </thead>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="filial">FILIAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="central">CENTRAL</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                     <tbody style="font-size: 12px;">
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td class="razao-social">ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</td>
+                           <td class="associado">ASSOCIADO</td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <!-- DESATUALIZADO -->
+         <div class="card card-infos">
+            <div class="card-body">
+               <div class="row justify-content-between">
+                  <div class="col-5">
+                     <h5 class="card-title"><strong>Pesquisa por Rede</strong></h5>
+                  </div>
+                  <div class="col-6" style="margin-bottom: 20px">
+                     <form action="">
+                        <div class="input-group">
+                           <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                           <div class="input-group-append">
+                              <button type="submit" class="btn btn-lg btn-default">
+                              <i class="fa fa-search"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body table-responsive" style="height: 500px; padding-top: 0px;">
+                  <table class="table table-head-fixed">
+                     <thead>
+                        <tr>
+                           <th>Rede</th>
+                           <th>Monitor</th>
+                           <th>Detalhes</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago-off.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago-off.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago-off.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago-off.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                        <tr>
+                           <td>redenordestesupermercados</td>
+                           <td><img src="dist/img/pago.svg"></td>
+                           <td><button class="btn-detail" type="button" data-toggle="modal" data-target="#Modalpesquisa"><img src="dist/img/chevron-right.svg"></button></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-auto tam-min">
+         <div class="small-box bg-white card-parado" type="button" data-toggle="modal" data-target="#Modal30dias">
+            <div class="inner inner-red parados-cards">
+               <div class="row justify-content-between cards-inner" style="">
+                  <div class="col-auto info-numero parado-numero dias">
+                     <h1><strong>30 dias</strong></h1>
+                     ou mais
+                  </div>
+                  <img class="col-auto icon" src="dist/img/30.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col-auto" style="padding-left: 30px;">
+                     <div class="metas meta-red">1% / 5,42%</div>
+                  </div>
+                  <div class="col-auto indicador-parado">
+                     <h1><strong>13</strong></h1>
+                     Parados
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="small-box bg-white card-parado" type="button" data-toggle="modal" data-target="#Modal5dias">
+            <div class="inner inner-red parados-cards">
+               <div class="row justify-content-between cards-inner" style="">
+                  <div class="col-auto info-numero parado-numero dias">
+                     <h1><strong>5 dias</strong></h1>
+                     ou mais
+                  </div>
+                  <img class="col-auto icon" src="dist/img/5.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col-auto" style="padding-left: 30px;">
+                     <div class="metas meta-orange">5% / 4,,17%</div>
+                  </div>
+                  <div class="col-auto indicador-parado">
+                     <h1><strong>10</strong></h1>
+                     Parados
+                  </div>
+               </div>
+            </div>
+         </div>
+<div class="small-box bg-white card-parado" type="button" data-toggle="modal" data-target="#Modal5dias">
+   <div class="inner inner-cinza parados-cards">
+      <div class="row justify-content-between cards-inner" style="">
+         <div class="col-auto info-numero parado-numero dias">
+            <h1><strong>Parados</strong></h1>
+            Total
+         </div>
+         <img class="col-auto icon" src="dist/img/total.svg">
+      </div>
+      <div class="row justify-content-between cards-inner">
+         <div class="col-auto" style="padding-left: 30px;">
+            <div class="metas meta-cinza">10% / 7,60%</div>
+         </div>
+         <div class="col-auto indicador-parado">
+            <h1><strong>478</strong></h1>
+            Parados
+         </div>
+      </div>
+   </div>
+</div>
+      </div>
+      <div class="col-md-auto tam-min">
+         <div class="small-box bg-white card-parado" type="button" data-toggle="modal" data-target="#Modal5dias">
+            <div class="inner inner-red parados-cards">
+               <div class="row justify-content-between cards-inner" style="">
+                  <div class="col-auto info-numero parado-numero dias">
+                     <h1><strong>15 dias</strong></h1>
+                     ou mais
+                  </div>
+                  <img class="col-auto icon" src="dist/img/15.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col-auto" style="padding-left: 30px;">
+                     <div class="metas meta-pink">1% / 2,50%</div>
+                  </div>
+                  <div class="col-auto indicador-parado">
+                     <h1><strong>6</strong></h1>
+                     Parados
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="small-box bg-white card-parado" type="button" data-toggle="modal" data-target="#Modal3dias">
+            <div class="inner inner-red parados-cards">
+               <div class="row justify-content-between cards-inner" style="">
+                  <div class="col-auto info-numero parado-numero dias">
+                     <h1><strong>3 dias</strong></h1>
+                     ou mais
+                  </div>
+                  <img class="col-auto icon" src="dist/img/3.svg">
+               </div>
+               <div class="row justify-content-between cards-inner">
+                  <div class="col-auto" style="padding-left: 30px;">
+                     <div class="metas meta-yellow">5,42%</div>
+                  </div>
+                  <div class="col-auto indicador-parado">
+                     <h1><strong>13</strong></h1>
+                     Parados
+                  </div>
+               </div>
+            </div>
+         </div>
+<div class="small-box card bg-white card-parado">
+   <div class="inner-parado inner-cinza">
+      <div class="row justify-content-between cards-inner top-box">
+         <div class="col">
+            <h5><strong>Aviso Monitores</strong></h5>
+         </div>
+      </div>
+   </div>
+   <div class="card-body table-responsive p-0" style="height: 135px; padding-top: 0px;">
+      <table class="table table-head-fixed text-nowrap">
+         <tbody>
+            <tr>
+               <td>
+                  <svg height="20" width="20">
+                     <circle fill="red" r="5" cy="10" cx="10"></circle>
+                  </svg>
+               </td>
+               <td>
+                  <div type="button" data-toggle="modal" data-target="#Modaldetalhe">
+                     <div class="monitor">Monitor vai para “Parados 15 dias"</div>
+                     <a class="parados-dias">10 dias</a>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <svg height="20" width="20">
+                     <circle fill="red" r="5" cy="10" cx="10"></circle>
+                  </svg>
+               </td>
+               <td>
+                  <div type="button" data-toggle="modal" data-target="#Modaldetalhe">
+                     <div class="monitor">Monitor vai para “Parados 15 dias"</div>
+                     <a class="parados-dias">10 dias</a>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <svg height="20" width="20">
+                     <circle fill="red" r="5" cy="10" cx="10"></circle>
+                  </svg>
+               </td>
+               <td>
+                  <div type="button" data-toggle="modal" data-target="#Modaldetalhe">
+                     <div class="monitor">Monitor vai para “Parados 15 dias"</div>
+                     <a class="parados-dias">10 dias</a>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <svg height="20" width="20">
+                     <circle fill="red" r="5" cy="10" cx="10"></circle>
+                  </svg>
+               </td>
+               <td>
+                  <div type="button" data-toggle="modal" data-target="#Modaldetalhe">
+                     <div class="monitor">Monitor vai para “Parados 15 dias"</div>
+                     <a class="parados-dias">10 dias</a>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+      </div>
+      <!-- small card -->
+   </div>
+   <!-- /.row -->
+</div>
+            </div>
+            <!-- /.content -->
+         </div>
+         <!-- /.content-wrapper -->
+         <!-- Modal detalhes -->
+         <div class="modal right fade" data-dismiss="modal" id="Modaldetalhe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="p-3 justify-content-between">
+                     <div class="row justify-content-between">
+                        <div class="col-auto"><button class="btn btn-light" type="button" data-toggle="modal" data-target="#Modalpesquisa" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                        <div class="col-auto" style="text-align: center;" id="myModalLabel">
+                           <h5><strong>Pesquisa por Associado</strong></h5>
+                        </div>
+                        <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                     </div>
+                  </div>
+                  <div class="p-3">
+                     <div class="row justify-content-md-center">
+                        <div class="col"><button type="button" data-toggle="modal" data-target="#Modalatend1" data-dismiss="modal" class="btn-atendimentos"><img src="dist/img/atendimento.svg"> Atendimento</button></div>
+                        <div class="col"><button type="button" data-toggle="modal" data-target="#Modalmail" data-dismiss="modal" class="btn-atendimentos" style=""><img src="dist/img/mail.svg"> E-mails</button></div>
+                        <div class="col"><button type="button" data-toggle="modal" data-target="#Modalassociado" data-dismiss="modal" class="btn-atendimentos" style=""><img src="dist/img/edit.svg"> Editar Associado</button></div>
+                     </div>
+                  </div>
+                  <div class="p-4">
+                     <a class="detail-title">Razão Social<img src="dist/img/copy.svg" class="p-2" style="margin-left: 5px;"></a>
+                     <hr>
+                     <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                  </div>
+                  <div class="p-4 row justify-content-between">
+                     <div class="col">
+                        <a class="detail-title">CNPJ<img src="dist/img/copy.svg" class="p-2" style="margin-left: 5px;"></a>
+                        <hr>
+                        <p>06.014.517/0001-16</p>
+                     </div>
+                     <div class="col">
+                        <form class="is-readonly">                        
+                        <a class="detail-title">ERP em Uso </a>
+                            <button type="button" class="btn-user btn-edit js-edit">Editar</button>
+                           <button type="button" class="btn-user btn-save js-save">Salvar</button>                       
+                        <hr>
+                           <div class="form">
+                              <input type="text" class="form-control is-disabled" id="exampleInputPassword1" placeholder="Name" value="Insira ERP aqui..." disabled>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="p-4 row justify-content-between">
+                     <div class="col">
+                        <a class="detail-title">Tipo de Usuário</a>
+                        <hr>
+                        <p class="filial">FILIAL</p>
+                     </div>
+                  <div class="col">
+                     <a class="detail-title">Última Consulta</a>
+                     <hr>
+                     <p>Há 14 minutos / NSU: 557</p>
+                  </div>                     
+                  </div>
+                  <div class="p-4 row justify-content-between">                  
+                  <div class="col">
+                     <a class="detail-title">Telefone<img src="dist/img/copy.svg" class="p-2" style="margin-left: 5px;"></a>
+                     <hr>
+                     <p>(35) 3297.4035<br>11 99915 5859</p>
+                  </div>
+                  <div class="col">
+                     <a class="detail-title">E-mail<img src="dist/img/copy.svg" class="p-2" style="margin-left: 5px;"></a>
+                     <hr>
+                     <p>lenir@yago.com.br<br>compras@campinas-aopharmaceutico.com.br</p>
+                  </div>
+               </div>
+                  <div class="p-4 row justify-content-between">
+                     <div class="col">
+                        <a class="detail-title">Versão</a>
+                        <hr>
+                        <p>202102221450</p>
+                        <div class="desatualizado">Desatualizado</div>
+                     </div>
+                  </div>
+               </div>
+               <!-- modal-content -->
+            </div>
+            <!-- modal-dialog -->
+         </div>
+         <!-- Modal detalhes end -->
+         <!-- Modal atendimento em andamento -->
+         <div class="modal right fade" data-dismiss="modal" id="Modalatend1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="p-3 justify-content-between">
+                     <div class="row justify-content-between">
+                        <div class="col-auto"><button class="btn btn-light" type="button" data-toggle="modal" data-target="#Modalpesquisa" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                        <div class="col-auto" style="text-align: center;" id="myModalLabel">
+                           <h5><strong>Histórico de Atendimento</strong></h5>
+                        </div>
+                        <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                     </div>
+                  </div>
+                  <div class="p-3">
+                     <div class="row justify-content-between"><a class="col detail-title">Certificado token/cartão desconectado</a><a class="col-auto andamento"><img src="dist/img/andamento.svg" class="p-2"> Em andamento</a></div>
+                     <hr>
+                     <div class="conteudo">
+                        <h6 class="description-title"><strong>Descrição</strong></h6>
+                        <p class="description-title">Encaminhei mensagem</p>
+                     </div>
+                     <div class="row justify-content-between">
+                        <div class="col">
+                           <h6 class="description-title"><strong>Data</strong></h6>
+                           <p class="description-title">05/05/2021  10:26:33</p>
+                        </div>
+                        <div class="col">
+                           <h6 class="description-title"><strong>Usuário</strong></h6>
+                           <p class="description-title">Danielle</p>
+                        </div>
+                        <div class="col"><button class="btn-atualizar" type="button" data-toggle="modal" data-target="#Modalatualizar" data-dismiss="modal"><img src="dist/img/atendimento-plus.svg"> Atualizar</button></div>
+                     </div>
+                     <div id="accordion">
+                        <div class="card" style="background-color: #F5F7FB;">
+                           <div class="card-header" id="headingOne">
+                              <h5 class="mb-0">
+                                 <button class="btn anteriores collapsed" data-toggle="collapse" data-target="#collapsehistorico" aria-expanded="false" aria-controls="collapsehistorico"><img src="dist/img/chevron-right.svg" class="p-2">
+                                 Atendimentos Anteriores
+                                 </button>
+                              </h5>
+                           </div>
+                           <div id="collapsehistorico" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                 <div class="row justify-content-between" style="
+                                    margin-bottom: 20px;
+                                    "><a class="col anteriores">Certificado token/cartão desconectado</a><a class="col-auto naoconcl"><img src="dist/img/nao-concluido.svg" class="p-2"> Não Concluído</a></div>
+                                 <div class="row justify-content-between">
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Descrição</strong></h6>
+                                       <p class="description-title">Encaminhei mensagem</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Data</strong></h6>
+                                       <p class="description-title">05/05/2021  10:26:33</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Usuário</strong></h6>
+                                       <p class="description-title">Danielle</p>
+                                    </div>
+                                 </div>
+                                 <hr>
+                              </div>
+                              <div class="card-body">
+                                 <div class="row justify-content-between" style="
+                                    margin-bottom: 20px;
+                                    "><a class="col anteriores">Certificado token/cartão desconectado</a><a class="col-auto naoconcl"><img src="dist/img/nao-concluido.svg" class="p-2"> Não Concluído</a></div>
+                                 <div class="row justify-content-between">
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Descrição</strong></h6>
+                                       <p class="description-title">Encaminhei mensagem</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Data</strong></h6>
+                                       <p class="description-title">05/05/2021  10:26:33</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Usuário</strong></h6>
+                                       <p class="description-title">Danielle</p>
+                                    </div>
+                                 </div>
+                                 <hr>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="p-3">
+                     <div class="row justify-content-between"><a class="col detail-title">Certificado token/cartão desconectado</a><a class="col-auto concl"><img src="dist/img/concluido.svg" class="p-2"> Concluído</a></div>
+                     <hr>
+                     <div class="conteudo">
+                        <h6 class="description-title"><strong>Descrição</strong></h6>
+                        <p class="description-title">Encaminhei mensagem</p>
+                     </div>
+                     <div class="row justify-content-between">
+                        <div class="col">
+                           <h6 class="description-title"><strong>Data</strong></h6>
+                           <p class="description-title">05/05/2021  10:26:33</p>
+                        </div>
+                        <div class="col">
+                           <h6 class="description-title"><strong>Usuário</strong></h6>
+                           <p class="description-title">Danielle</p>
+                        </div>
+                     </div>
+                     <div id="accordion">
+                        <div class="card" style="background-color: #F5F7FB;">
+                           <div class="card-header" id="headingOne">
+                              <h5 class="mb-0">
+                                 <button class="btn anteriores collapsed" data-toggle="collapse" data-target="#collapsehistorico2" aria-expanded="false" aria-controls="collapsehistorico2"><img src="dist/img/chevron-right.svg" class="p-2">
+                                 Atendimentos Anteriores
+                                 </button>
+                              </h5>
+                           </div>
+                           <div id="collapsehistorico2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                 <div class="row justify-content-between" style="
+                                    margin-bottom: 20px;
+                                    "><a class="col anteriores">Certificado token/cartão desconectado</a><a class="col-auto naoconcl"><img src="dist/img/nao-concluido.svg" class="p-2"> Não Concluído</a></div>
+                                 <div class="row justify-content-between">
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Descrição</strong></h6>
+                                       <p class="description-title">Encaminhei mensagem</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Data</strong></h6>
+                                       <p class="description-title">05/05/2021  10:26:33</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Usuário</strong></h6>
+                                       <p class="description-title">Danielle</p>
+                                    </div>
+                                 </div>
+                                 <hr>
+                              </div>
+                              <div class="card-body">
+                                 <div class="row justify-content-between" style="
+                                    margin-bottom: 20px;
+                                    "><a class="col anteriores">Certificado token/cartão desconectado</a><a class="col-auto naoconcl"><img src="dist/img/nao-concluido.svg" class="p-2"> Não Concluído</a></div>
+                                 <div class="row justify-content-between">
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Descrição</strong></h6>
+                                       <p class="description-title">Encaminhei mensagem</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Data</strong></h6>
+                                       <p class="description-title">05/05/2021  10:26:33</p>
+                                    </div>
+                                    <div class="conteudo col">
+                                       <h6 class="description-title"><strong>Usuário</strong></h6>
+                                       <p class="description-title">Danielle</p>
+                                    </div>
+                                 </div>
+                                 <hr>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- modal-content -->
+         </div>
+         <!-- modal-dialog -->
+      </div>
+      <!-- Modal atendimento em andamento end -->
+      <!-- Modal atendimento concluido -->
+      <div class="modal right fade" data-dismiss="modal" id="Modalatend2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="p-3 justify-content-between">
+                  <div class="row justify-content-between">
+                     <div class="col-auto"><button class="btn btn-light" type="button" data-toggle="modal" data-target="#Modalpesquisa" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                     <div class="col-auto" style="text-align: center;" id="myModalLabel">
+                        <h5><strong>Histórico de Atendimento</strong></h5>
+                     </div>
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                  </div>
+               </div>
+               <div class="p-3">
+                  <button class="btn-atualizar btn-novoatend" type="button" data-toggle="modal" data-target="#Modalnovo" data-dismiss="modal"><img src="dist/img/atendimento-plus.svg"> Adicionar Novo Atendimento</button>
+               </div>
+               <div class="p-3">
+                  <div class="row justify-content-between"><a class="col detail-title">Certificado token/cartão desconectado</a><a class="col-auto concl"><img src="dist/img/concluido.svg" class="p-2"> Concluído</a></div>
+                  <hr>
+                  <div>
+                     <h6 class="description-title"><strong>Descrição</strong></h6>
+                     <p class="description-title">Encaminhei mensagem</p>
+                  </div>
+                  <div class="row justify-content-between">
+                     <div class="col">
+                        <h6 class="description-title"><strong>Data</strong></h6>
+                        <p class="description-title">05/05/2021  10:26:33</p>
+                     </div>
+                     <div class="col">
+                        <h6 class="description-title"><strong>Usuário</strong></h6>
+                        <p class="description-title">Danielle</p>
+                     </div>
+                  </div>
+                  <div id="accordion">
+                     <div class="card" style="background-color: #F5F7FB;">
+                        <div class="card-header" id="headingTwo">
+                           <h5 class="mb-0">
+                              <button class="btn anteriores collapsed" data-toggle="collapse" data-target="#collapsehistorico3" aria-expanded="false" aria-controls="collapsehistorico3"><img src="dist/img/chevron-right.svg" class="p-2">
+                              Atendimentos Anteriores
+                              </button>
+                           </h5>
+                        </div>
+                        <div id="collapsehistorico3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                           <div class="card-body">
+                              <div class="row justify-content-between" style="margin-bottom: 20px;"><a class="col anteriores">Certificado token/cartão desconectado</a><a class="col-auto naoconcl"><img src="dist/img/nao-concluido.svg" class="p-2"> Não Concluído</a></div>
+                              <div class="row justify-content-between">
+                                 <div class="conteudo col">
+                                    <h6><strong>Descrição</strong></h6>
+                                    <p>Encaminhei mensagem</p>
+                                 </div>
+                                 <div class="conteudo col">
+                                    <h6><strong>Data</strong></h6>
+                                    <p>05/05/2021  10:26:33</p>
+                                 </div>
+                                 <div class="conteudo col">
+                                    <h6><strong>Usuário</strong></h6>
+                                    <p>Danielle</p>
+                                 </div>
+                              </div>
+                              <hr>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+      </div>
+      <!-- Modal atendimento concluido end -->
+      <!-- Modal pesquisa -->
+      <div class="modal right fade" id="Modalpesquisa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="p-3">
+                  <div class="row justify-content-between">
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                     <div class="col-auto" style="text-align: center;">
+                        <h5><strong>Pesquisa por Associado</strong></h5>
+                     </div>
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                  </div>
+               </div>
+               <form action="" style="padding: 20px;padding-top: 0;">
+                  <div class="input-group">
+                     <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                     <div class="input-group-append">
+                        <button type="submit" class="btn btn-lg btn-default">
+                        <i class="fa fa-search"></i>
+                        </button>
+                     </div>
+                  </div>
+               </form>
+               <div class="card-body" style="padding-top: 0px;">
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/3-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/3-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/3-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+      </div>
+      <!-- Modal pesquisa end -->
+       <!-- Modal 30 dias -->
+      <div class="modal right fade" id="Modal30dias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="p-3">
+                  <div class="row justify-content-between">
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                     <div class="col-auto" style="text-align: center;">
+                        <h5><strong>Parados 30 dias ou mais</strong></h5>
+                     </div>
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                  </div>
+               </div>
+               <form action="" style="padding: 20px;padding-top: 0;">
+                  <div class="input-group">
+                     <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                     <div class="input-group-append">
+                        <button type="submit" class="btn btn-lg btn-default">
+                        <i class="fa fa-search"></i>
+                        </button>
+                     </div>
+                  </div>
+               </form>
+               <div class="card-body" style="padding-top: 0px;">
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/30-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/30-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/30-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+      </div>
+      <!-- Modal 30 dias end -->
+      <!-- Modal 15 dias -->
+      <div class="modal right fade" id="Modal15dias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="p-3">
+                  <div class="row justify-content-between">
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                     <div class="col-auto" style="text-align: center;">
+                        <h5><strong>Parados 15 dias ou mais</strong></h5>
+                     </div>
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                  </div>
+               </div>
+               <form action="" style="padding: 20px;padding-top: 0;">
+                  <div class="input-group">
+                     <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                     <div class="input-group-append">
+                        <button type="submit" class="btn btn-lg btn-default">
+                        <i class="fa fa-search"></i>
+                        </button>
+                     </div>
+                  </div>
+               </form>
+               <div class="card-body" style="padding-top: 0px;">
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/15-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/15-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/15-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+      </div>
+      <!-- Modal 15 dias end -->
+      <!-- Modal 5 dias -->
+      <div class="modal right fade" id="Modal5dias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="p-3">
+                  <div class="row justify-content-between">
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                     <div class="col-auto" style="text-align: center;">
+                        <h5><strong>Parados 5 dias ou mais</strong></h5>
+                     </div>
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                  </div>
+               </div>
+               <form action="" style="padding: 20px;padding-top: 0;">
+                  <div class="input-group">
+                     <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                     <div class="input-group-append">
+                        <button type="submit" class="btn btn-lg btn-default">
+                        <i class="fa fa-search"></i>
+                        </button>
+                     </div>
+                  </div>
+               </form>
+               <div class="card-body" style="padding-top: 0px;">
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/5-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/5-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/5-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+      </div>
+      <!-- Modal 5 dias end -->
+      <!-- Modal 3 dias -->
+      <div class="modal right fade" id="Modal3dias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:0;">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="p-3">
+                  <div class="row justify-content-between">
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-chevron-left"></i></button></div>
+                     <div class="col-auto" style="text-align: center;">
+                        <h5><strong>Parados 3 dias ou mais</strong></h5>
+                     </div>
+                     <div class="col-auto"><button class="btn btn-light" data-dismiss="modal"><i class="fas fa-times"></i></button></div>
+                  </div>
+               </div>
+               <form action="" style="padding: 20px;padding-top: 0;">
+                  <div class="input-group">
+                     <input type="search" class="form-control form-control-lg" placeholder="Insira CNPJ ou nome aqui...">
+                     <div class="input-group-append">
+                        <button type="submit" class="btn btn-lg btn-default">
+                        <i class="fa fa-search"></i>
+                        </button>
+                     </div>
+                  </div>
+               </form>
+               <div class="card-body" style="padding-top: 0px;">
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/3-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/3-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="lista-associado">
+                     <div class="row">
+                        <div class="col-auto">
+                           Razão Social<img src="dist/img/3-icon.svg" class="p-2" style="margin-left: 5px;">
+                           <p>ASSOCIACAO DAS EMPRESAS DE MATERIAIS PARA CONSTRUCAO DO CENTRO-OESTE E NORTE DO BRASIL - AMACON</p>
+                        </div>
+                     </div>
+                     <div class="row justify-content-between p-3">
+                        <div class="col-auto infos">CNPJ:<br>06.014.517/0001-16</div>
+                        <div class="col-auto infos">Filial de:<br>FARMACIA VIEIRA BARBOSA LTDA</div>
+                        <div class="col-auto infos">ERP em uso:<br>Viasoft</div>
+                     </div>
+                     <div class="d-flex justify-content-between">
+                        <button class="col btn-user" type="button" data-toggle="modal" data-target="#Modalatend2" data-dismiss="modal"><img src="dist/img/atendimento.svg"></button><button class="col btn-detail" type="button" data-toggle="modal" data-target="#Modaldetalhe" data-dismiss="modal" style="font-size:">Detalhes <img src="dist/img/chevron-right.svg"></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+      </div>
+      <!-- Modal 3 dias end -->
+      <!-- Modal Atualizar atendimento -->
+      <div class="modal fade" id="Modalatualizar" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="border-radius: 10px;">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Atualizar Atendimento</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div class="row form-group">
+                     <div class="col form-check form-check-inline">
+                        <label for="toggle" style="margin-right: 10px;">Tornar Privado?</label>
+                        <input type="checkbox" data-on="Sim" data-off="Não" data-toggle="toggle" data-onstyle="primary">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="motivo">Descreva o que aconteceu no seu atendimento.</label>
+                     <textarea class="form-control" aria-label="With textarea" placeholder="Digite a situação aqui..." style="margin-top: 0px; margin-bottom: 0px; height: 99px;"></textarea>
+                  </div>
+                  <div class="form-group form-check">
+                     <input type="checkbox" class="form-check-input" id="certificadoativo">
+                     <label class="form-check-label" for="certificadoativo">Atendimento Resolvido</label>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-success">Atualizar Atendimento</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal Atualizar atendimento end -->
+      <!-- Modal novo atendimento -->
+      <div class="modal fade" id="Modalnovo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="border-radius: 10px;">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Adicionar Novo Atendimento</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col form-group">
+                        <label for="motivo">Qual o motivo do atendimento?</label>
+                        <select class="custom-select" id="motivo">
+                           <option>-- Motivo --</option>
+                           <option value="1">Bloqueio na conexão/rede</option>
+                           <option value="2">Certificado token/cartão desconectado</option>
+                           <option value="3">Certificado vencido</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="row form-group">
+                     <div class="col form-check form-check-inline">
+                        <label for="toggle" style="margin-right: 10px;">Tornar Privado?</label>
+                        <input type="checkbox" data-on="Sim" data-off="Não" data-toggle="toggle" data-onstyle="primary">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="motivo">Descreva o que aconteceu no seu atendimento.</label>
+                     <textarea class="form-control" aria-label="With textarea" placeholder="Digite a situação aqui..." style="margin-top: 0px; margin-bottom: 0px; height: 99px;"></textarea>
+                  </div>
+                  <div class="form-group form-check">
+                     <input type="checkbox" class="form-check-input" id="certificadoativo">
+                     <label class="form-check-label" for="certificadoativo">Atendimento Resolvido</label>
+                  </div>
+               </div>
+               <div class="modal-footer align-middle">
+                  <button type="button" class="btn btn-success">Inserir Atendimento</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal novo atendimento end -->
+      <!-- Modal editar associado -->
+      <div class="modal fade" id="Modalassociado" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="border-radius: 10px;">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Editar Associado</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <form>
+                     <div class="row form-group">
+                        <div class="col-auto form-check form-check-inline">
+                           <label for="toggle" style="margin-right: 10px;">Instalar?</label>
+                           <input type="checkbox" data-on="Sim" data-off="Não" data-toggle="toggle" data-onstyle="primary">
+                        </div>
+                        <div class="col-auto form-check form-check-inline">
+                           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseintegra" aria-expanded="false" aria-controls="collapseintegra">O Associado Possui Integração</button></p>
+                        </div>
+                     </div>
+                     </form>
+                     <div class="collapse" id="collapseintegra">
+                     <div class="form-group">
+                        <label for="ultimo">Nome da Integração</label>
+                        <input type="name" class="form-control" id="ultimo" placeholder="561">
+                     </div>
+                  </div>
+                  <form>
+                     <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="certificadoativo">
+                        <label class="form-check-label" for="certificadoativo">Certificado Ativo</label>
+                     </div>
+                  </form>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-success">Confirmar</button><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modaldetalhe"data-dismiss="modal">Cancelar</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal editar associado end -->
+            <!-- Modal email -->
+      <div class="modal fade" id="Modalmail" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="border-radius: 10px;">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Relação de E-mails</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                   <div class="accordion" id="accordionExample" style="height:300px;overflow-y: auto;">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><img src="dist/img/concluido.svg" style="
+    padding-right: 10px;"> 08/02/2018 08:10 - gerencia@acaomagistral.org.br</button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+    <table class="table table-borderless">
+       <tbody>
+    <tr>
+      <th scope="row">Título:</th>
+      <td>Monitores de compras parados há mais de 15 dias!</td>
+      
+      
+    </tr>
+    <tr>
+      <th scope="row">Modelo:</th>
+      <td>monitor15d_gestor</td>
+      
+      
+    </tr>
+    <tr>
+      <th scope="row">Situação:</th>
+      
+      <td>fila - E-mail na fila de envio.
+</td>
+    </tr>
+  <tr>
+      <th scope="row">Data abertura:</th>
+      
+      <td>Abertura não identificada
+</td>
+    </tr></tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+    
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><img src="dist/img/nao-concluido.svg"> 08/02/2018 08:10 - gerencia@acaomagistral.org.br</button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+    <table class="table table-borderless">
+       <tbody>
+    <tr>
+      <th scope="row">Título:</th>
+      <td>Monitores de compras parados há mais de 15 dias!</td>   
+    </tr>
+    <tr>
+      <th scope="row">Modelo:</th>
+      <td>monitor15d_gestor</td> 
+    </tr>
+    <tr>
+      <th scope="row">Situação:</th>
+      
+      <td>fila - E-mail na fila de envio.
+</td>
+    </tr>
+  <tr>
+      <th scope="row">Data abertura:</th>
+      
+      <td>Abertura não identificada
+</td>
+    </tr></tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+  
+<div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><img src="dist/img/nao-concluido.svg"> 08/02/2018 08:10 - gerencia@acaomagistral.org.br</button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
+      <div class="card-body">
+    <table class="table table-borderless">
+       <tbody>
+    <tr>
+      <th scope="row">Título:</th>
+      <td>Monitores de compras parados há mais de 15 dias!</td>
+    </tr>
+    <tr>
+      <th scope="row">Modelo:</th>
+      <td>monitor15d_gestor</td>
+    </tr>
+    <tr>
+      <th scope="row">Situação:</th>
+      
+      <td>fila - E-mail na fila de envio.
+</td>
+    </tr>
+  <tr>
+      <th scope="row">Data abertura:</th>
+      
+      <td>Abertura não identificada
+</td>
+    </tr></tbody>
+    </table>
+      </div>
+    </div>
+  </div><div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><img src="dist/img/nao-concluido.svg"> 08/02/2018 08:10 - gerencia@acaomagistral.org.br</button>
+      </h5>
+    </div>
+
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample" style="">
+      <div class="card-body">
+    <table class="table table-borderless">
+       <tbody>
+    <tr>
+      <th scope="row">Título:</th>
+      <td>Monitores de compras parados há mais de 15 dias!</td>
+    </tr>
+    <tr>
+      <th scope="row">Modelo:</th>
+      <td>monitor15d_gestor</td>
+    </tr>
+    <tr>
+      <th scope="row">Situação:</th>
+      <td>fila - E-mail na fila de envio.
+</td>
+    </tr>
+  <tr>
+      <th scope="row">Data abertura:</th>
+      <td>Abertura não identificada
+</td>
+    </tr></tbody>
+    </table>
+      </div>
+    </div>
+  </div><div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><img src="dist/img/nao-concluido.svg" style="
+    padding-right: 10px;"> 08/02/2018 08:10 - gerencia@acaomagistral.org.br</button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+    <table class="table table-borderless">
+       <tbody>
+    <tr>
+      <th scope="row">Título:</th>
+      <td>Monitores de compras parados há mais de 15 dias!</td>
+    </tr>
+    <tr>
+      <th scope="row">Modelo:</th>
+      <td>monitor15d_gestor</td>
+    </tr>
+    <tr>
+      <th scope="row">Situação:</th>
+      
+      <td>fila - E-mail na fila de envio.
+</td>
+    </tr>
+  <tr>
+      <th scope="row">Data abertura:</th>
+      
+      <td>Abertura não identificada
+</td>
+    </tr></tbody>
+    </table>
+      </div>
+    </div>
+  </div><div class="card">
+    <div class="card-header" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><img src="dist/img/nao-concluido.svg" style="
+    padding-right: 10px;"> 08/02/2018 08:10 - gerencia@acaomagistral.org.br</button>
+      </h5>
+    </div>
+
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+    <table class="table table-borderless">
+       <tbody>
+    <tr>
+      <th scope="row">Título:</th>
+      <td>Monitores de compras parados há mais de 15 dias!</td>
+    </tr>
+    <tr>
+      <th scope="row">Modelo:</th>
+      <td>monitor15d_gestor</td>
+    </tr>
+    <tr>
+      <th scope="row">Situação:</th>
+      <td>fila - E-mail na fila de envio.
+</td>
+    </tr>
+  <tr>
+      <th scope="row">Data abertura:</th>
+      <td>Abertura não identificada
+</td>
+    </tr></tbody>
+    </table>
+      </div>
+    </div>
+  </div><div class="card">
+    <div class="card-header" id="headingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"><img src="dist/img/nao-concluido.svg" style="
+    padding-right: 10px;"> 08/02/2018 08:10 - gerencia@acaomagistral.org.br</button>
+      </h5>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample" style="">
+      <div class="card-body">
+    <table class="table table-borderless">
+       <tbody>
+    <tr>
+      <th scope="row">Título:</th>
+      <td>Monitores de compras parados há mais de 15 dias!</td>
+    </tr>
+    <tr>
+      <th scope="row">Modelo:</th>
+      <td>monitor15d_gestor</td>
+    </tr>
+    <tr>
+      <th scope="row">Situação:</th>
+      
+      <td>fila - E-mail na fila de envio.
+</td>
+    </tr>
+  <tr>
+      <th scope="row">Data abertura:</th>
+      
+      <td>Abertura não identificada
+</td>
+    </tr></tbody>
+    </table>
+      </div>
+    </div>
+  </div></div>
+  </div>
+                  <div class="modal-footer">
+                     <button type="button" data-toggle="modal" data-target="#Modaldetalhe" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                  </div>
+               
+            </div>
+         </div>
+      </div>
+      <!-- Modal email end -->
+      <!-- REQUIRED SCRIPTS -->
+      <!-- jQuery -->
+      <script>$('control-sidebar').click(function(e) {
+         master.toggleClass('slide');
+         side.toggleClass('pop');
+         })
+      </script>
+      <script src="plugins/jquery/jquery.min.js"></script>
+      <!-- Bootstrap 4 -->
+      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/adminlte.min.js"></script>
+      <script type="text/javascript">
+  $(document).ready(function(){
+        $('.collapse').on('show.bs.collapse', function () {
+            $('.collapse.show').each(function(){
+                $(this).collapse('hide');
+            });
+        });
+    });
+</script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+           $('.js-edit, .js-save').on('click', function(){
+             var $form = $(this).closest('form');
+             $form.toggleClass('is-readonly is-editing');
+             var isReadonly  = $form.hasClass('is-readonly');
+             $form.find('input,textarea').prop('disabled', isReadonly);
+           });
+         });
+      </script>
+   </body>
+</html>
